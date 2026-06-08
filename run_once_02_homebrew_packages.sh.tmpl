@@ -3,8 +3,6 @@
 set -e
 
 brew bundle --file=/dev/stdin <<EOF
-tap "homebrew/bundle"
-tap "homebrew/services"
 
 brew "bat"
 brew "chrome-cli"
@@ -30,18 +28,9 @@ brew "yt-dlp"
 {{ if eq .env "work" }}
 brew "coreutils"
 brew "diffutils"
-brew "gh"
 brew "jq"
-brew "kubectx"
-brew "kubernetes-cli"
 brew "nvm"
-brew "pipx"
 brew "pnpm"
-brew "postgresql@17"
-brew "pre-commit"
-brew "pyenv"
-brew "xz"
-brew "yq"
 {{ end }}
 
 cask "arc"
@@ -50,45 +39,33 @@ cask "fantastical"
 cask "firefox"
 cask "font-fira-code"
 cask "gitup"
-{{- if eq .env "personal" }}
-# Preinstalled on the work machine
-cask "google-chrome"
-{{- end }}
 cask "iterm2"
 cask "jordanbaird-ice"
 cask "kap"
 cask "keyboardcleantool"
-{{- if eq .env "work" }}
-# Used for review script
-cask "marked-app"
-{{- end }}
-cask "microsoft-edge"
-cask "mimestream"
-{{- if eq .env "personal" }}
-cask "minecraft"
-{{- end }}
-cask "moom"
 cask "obsidian"
 cask "raycast"
-{{- if eq .env "personal" }}
-# Preinstalled on the work machine
-cask "slack"
-{{- end }}
 cask "spotify"
 cask "sublime-text"
 cask "todoist"
 cask "visual-studio-code"
+cask "1password"
+
+{{- if eq .env "personal" }}
+# Preinstalled on the work machine
+cask "google-chrome"
+cask "microsoft-edge"
+
+cask "mimestream"
+cask "minecraft"
+cask "slack"
 cask "vlc"
 cask "whatsapp"
-cask "zoom"
-
-{{ if eq .env "personal" }}
-cask "1password"
 cask "1password-cli"
 cask "backblaze"
 cask "calibre"
 cask "tableplus"
-{{ end }}
+{{- end }}
 EOF
 
 # Manual install step

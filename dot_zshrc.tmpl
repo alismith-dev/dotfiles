@@ -37,8 +37,6 @@ plugins=(
   git
   vi-mode
   z
-  ruby
-  rbenv
 )
 
 # Set up oh-my-zsh
@@ -71,17 +69,6 @@ export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
 {{ if eq .env "work" }}
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-# pipx
-export PATH="$PATH:$HOME/.local/bin"
-
-# AWS
-export AWS_PROFILE=AWSEngineeringAdminAccess-workloads.test.main
-
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 {{ end }}

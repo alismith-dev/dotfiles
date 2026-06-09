@@ -7,14 +7,18 @@ EXTENSIONS=(
   cmstead.js-codeformer
   dbaeumer.vscode-eslint
   esbenp.prettier-vscode
-  GitHub.vscode-pull-request-github
+  YoavBls.pretty-ts-errors
   mikestead.dotenv
-  ms-vscode.sublime-keybindings
   sdras.inbedby7pm
   SimonSiefke.svg-preview
   streetsidesoftware.code-spell-checker
-  Zignd.html-css-class-completion
+
+  # This works for gitlab as well as github
   ziyasal.vscode-open-in-github
+  {{ if eq .env "personal" }}
+  # Work doesn't use github
+  GitHub.vscode-pull-request-github
+  {{ end }}
 )
 
 for EXTENSION in "${EXTENSIONS[@]}";

@@ -28,7 +28,11 @@
     "[In Bed by 7pm]": {
       // Fix bad contrast of tabs text on unfocused split panes
       "tab.unfocusedActiveBackground": "#292c3d",
-      "tab.unfocusedInactiveForeground": "#fff"
+      "tab.unfocusedInactiveForeground": "#fff",
+      // Fix bad contrast of scrollbar
+      "scrollbarSlider.activeBackground": "#0f0f148f",
+      "scrollbarSlider.background": "#080a127f",
+      "scrollbarSlider.hoverBackground": "#0000017f",
     }
   },
   "workbench.colorTheme": "In Bed by 7pm",

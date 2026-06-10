@@ -69,6 +69,6 @@ export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
 {{ if eq .env "work" }}
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+# Vite+ bin (https://viteplus.dev)
+. "$HOME/.vite-plus/env"
 {{ end }}

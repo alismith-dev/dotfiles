@@ -64,11 +64,16 @@ export EDITOR='code -n -w'
 # we have to manually add it to the path
 export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
 
+{{ if eq .env "personal" }}
 # Add volta to path
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+{{ end }}
 
 {{ if eq .env "work" }}
-# Vite+ bin (https://viteplus.dev)
+# Allow GPG to prompt for a passphase
+export GPG_TTY=$(tty)
+
+# Vite+ bin (https://viteplus.dev), using this for Node version management
 . "$HOME/.vite-plus/env"
 {{ end }}

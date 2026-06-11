@@ -31,13 +31,12 @@ brew "diffutils"
 brew "gpg"
 brew "jq"
 brew "nvm"
+brew "pinentry-mac"
 brew "pnpm"
+brew "prek"
 {{ end }}
 
 cask "arc"
-cask "dropbox"
-cask "fantastical"
-cask "firefox"
 cask "font-fira-code"
 cask "gitup"
 cask "iterm2"
@@ -54,18 +53,21 @@ cask "1password"
 
 {{- if eq .env "personal" }}
 # Preinstalled on the work machine
+cask "firefox"
 cask "google-chrome"
 cask "microsoft-edge"
 
-cask "mimestream"
-cask "minecraft"
-cask "slack"
-cask "vlc"
-cask "whatsapp"
 cask "1password-cli"
 cask "backblaze"
 cask "calibre"
+cask "dropbox"
+cask "fantastical"
+cask "mimestream"
+cask "minecraft"
+cask "slack"
 cask "tableplus"
+cask "vlc"
+cask "whatsapp"
 {{- end }}
 EOF
 

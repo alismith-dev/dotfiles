@@ -1,6 +1,9 @@
 [user]
   name = {{ .myFullName | quote }}
   email = {{ .email | quote }}
+  {{- if eq .env "work" }}
+  signingkey = 886FDA70BBB7CDCF
+  {{- end }}
 
 [core]
   pager = delta

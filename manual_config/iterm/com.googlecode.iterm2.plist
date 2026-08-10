@@ -29,7 +29,7 @@
 	<key>AitermURL</key>
 	<string>https://api.openai.com/v1/responses</string>
 	<key>AllowClipboardAccess</key>
-	<false/>
+	<true/>
 	<key>AnimateDimming</key>
 	<false/>
 	<key>AutoHideTmuxClientSession</key>
@@ -47,7 +47,7 @@
 	<key>CopyLastNewline</key>
 	<false/>
 	<key>CopySelection</key>
-	<true/>
+	<false/>
 	<key>Default Arrangement Name</key>
 	<string>Natcap</string>
 	<key>Default Bookmark Guid</key>
